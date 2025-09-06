@@ -9,11 +9,11 @@ std::vector<float> xvector;
 std::vector<float> uxvector;
 
 //Initialize x to populate x vector
-double x = -0.1;
+double x = 0;
 do {
 	xvector.push_back(x);
 	x = x + 0.01;
-} while (x<3);
+} while (x<=1);
 
 //Populate u(x) vector using each of the values in x vector
 for (auto e: xvector) {
