@@ -1,6 +1,7 @@
 #include <fstream>
 #include <vector>
 #include <cmath>
+#include <iomanip>
 
 int main() {
 std::vector<float> xvector;
@@ -18,6 +19,7 @@ for (auto e: xvector) {
 }
 
 std::ofstream outputFile("problem2.txt");
+outputFile << std::scientific << std::setprecision(6);
 
 if (outputFile.is_open()) {
 	if (xvector.size() == uxvector.size()) {
