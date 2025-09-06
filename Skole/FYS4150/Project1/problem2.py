@@ -7,8 +7,8 @@ ux = []
 
 for line in file:
     vals = line.split(",")
-    x.append(vals[0])
-    ux.append(vals[1])
+    x.append(float(vals[0]))
+    ux.append(float(vals[1]))
 
 plt.plot(x,ux)
 plt.savefig("problem2.pdf")
