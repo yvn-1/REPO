@@ -20,7 +20,7 @@ std::ofstream outputFile("problem2.txt");
 if (outputFile.is_open()) {
 	if (xvector.size() == uxvector.size()) {
 		for (size_t i=0; i<xvector.size();i++) {
-			outputFile << xvector[i] << "," << uxvector << std::endl;
+			outputFile << xvector[i] << "," << uxvector[i] << std::endl;
 		}
 	};
 };
