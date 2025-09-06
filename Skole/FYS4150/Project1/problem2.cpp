@@ -13,7 +13,7 @@ double x = 0;
 do {
 	xvector.push_back(x);
 	x = x + 0.01;
-} while (x<=1);
+} while (x<=1.1);
 
 //Populate u(x) vector using each of the values in x vector
 for (auto e: xvector) {
