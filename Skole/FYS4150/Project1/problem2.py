@@ -11,4 +11,8 @@ for line in file:
     ux.append(float(vals[1]))
 
 plt.plot(x,ux)
+plt.grid(True)
+plt.xlabel("x")
+plt.ylabel("u(x)")
+
 plt.savefig("problem2.pdf")

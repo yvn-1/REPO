@@ -7,11 +7,11 @@ int main() {
 std::vector<float> xvector;
 std::vector<float> uxvector;
 
-double x = 0.00001;
+double x = -0.1;
 do {
 	xvector.push_back(x);
-	x = x + 0.1;
-} while (x<10);
+	x = x + 0.01;
+} while (x<3);
 
 for (auto e: xvector) {
 	float val = 1.0-(1.0-std::exp(-10.0))*e-std::exp(-10.0*e);
@@ -19,7 +19,7 @@ for (auto e: xvector) {
 }
 
 std::ofstream outputFile("problem2.txt");
-outputFile << std::scientific << std::setprecision(6);
+outputFile << std::scientific << std::setprecision(3);
 
 if (outputFile.is_open()) {
 	if (xvector.size() == uxvector.size()) {
