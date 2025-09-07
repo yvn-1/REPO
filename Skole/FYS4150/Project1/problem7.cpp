@@ -9,19 +9,21 @@ int N;
 int n = N-1;
 std::vector<float> b(n, 2.0f);
 
-float h = 1.0f/N;
+float h = 1.0f/n;
 
-float x[N];
-for (int i = 0; i<N;i++) {
+vector<float> x(n);
+for (int i = 0; i<n;i++) {
 	x[i] = i*h;
 };
 
-float f(x) {
-	return std::exp(-10*x)
+float f(float x) {
+	return std::expf(-10*x)
 };
 
 std::vector<float> u;
 
-for (e: x) {
+for (auto e: x) {
 	u.push_back(f(e));
 };
+
+
