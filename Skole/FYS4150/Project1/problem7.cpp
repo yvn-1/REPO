@@ -23,7 +23,7 @@ int main() {
 	std::vector<float> u(n);
 
 	for (int i = 0; i < n; i++) {
-		u[i] = h*h*f(e));
+		u[i] = h*h*f(x[i]));
 	};
 
 	for (int i = 1; i<n; i++) {
