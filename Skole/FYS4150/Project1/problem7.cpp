@@ -23,7 +23,7 @@ int main() {
 	std::vector<float> u(n);
 
 	for (int i = 0; i < n; i++) {
-		u[i] = h*h*f(x[i]));
+		u[i] = h*h*f(x[i]);
 	};
 
 	for (int i = 1; i<n; i++) {
@@ -31,8 +31,9 @@ int main() {
 		b[i] = b[i] - m*c;
 		g[i] = g[i] - m*g[i-1];
 	};
-	v[N]=0;
-	for (int i = n; i > 1; i--) {
+	v[n]=0;
+	v[n-1] = g[n-1] / b[n-1];
+	for (int i = n-2; i >= 0; i--) {
 		v[i] = (g[i]-c*v[i+1])/b[i];
 	};
 
