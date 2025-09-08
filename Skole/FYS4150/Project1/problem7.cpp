@@ -18,7 +18,7 @@ int main() {
 	std::vector<float> x(n);
 	x[0] = 0;
 	for (int i = 1; i<n;i++) {
-		x[i] = (i+1)*h;
+		x[i] = i*h;
 	};
 
 	std::vector<float> u(n);
