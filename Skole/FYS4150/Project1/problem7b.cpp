@@ -39,7 +39,7 @@ void solve(int N) {
 	};
 	std::string filename = "problem7"+std::to_string(N)+".txt";
 	std::ofstream file(filename);
-	file << std::scientific << std::setprecision(21);
+	file << std::scientific << std::setprecision(32);
 	for (int i = 0; i < n; i++) {
 		file << x[i] << "," << v[i] <<std::endl;
 	};
