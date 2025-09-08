@@ -34,7 +34,7 @@ int main() {
 	};
 	v[0] = 0;
 	v[n-1] = u[n-1] / b[n-1];
-	for (int i = n-2; i >= 0; i--) {
+	for (int i = n-2; i > 0; i--) {
 		v[i] = (u[i]-c*v[i+1])/b[i];
 	};
 	
