@@ -3,7 +3,7 @@
 #include <vector>
 #include <iomanip>
 
-float f(float x) {return 100 * std::expf(-10*x);};
+float f(float x) {return std::expf(-10*x);};
 
 int main() {
 	float a = -1.0f;
@@ -24,7 +24,7 @@ int main() {
 	std::vector<float> u(n);
 
 	for (int i = 0; i < n; i++) {
-		u[i] = h*h*f(x[i]);
+		u[i] = 100.0*h*h*f(x[i]);
 	};
 
 	for (int i = 1; i<n; i++) {
