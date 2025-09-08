@@ -17,7 +17,7 @@ def read_and_analyze(filename):
     for i in range(1,len(x)):
         diff = abs(u[i]-v[i])
         err.append(np.log10(diff))
-    plt.plot(x[1:],err,label=f"Error when N={len(x)}")
+    plt.plot(x[1:],err,label=f"Error when N={len(x)+1}")
 
 read_and_analyze("problem710.txt")
 read_and_analyze("problem7100.txt")
