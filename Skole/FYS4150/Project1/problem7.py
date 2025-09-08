@@ -11,4 +11,7 @@ for line in file:
     v.append(float(vals[1]))
 
 plt.plot(x,v)
+plt.grid(True)
+plt.xlabel("x")
+plt.ylabel("v_i")
 plt.savefig("problem7a.pdf")
