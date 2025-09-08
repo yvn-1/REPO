@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <string>
 
-float f(float x) {return std::expf(-10*x);};
+double f(float x) {return std::expf(-10*x);};
 
 void solve(int N) {
 	double a = -1.0f;
