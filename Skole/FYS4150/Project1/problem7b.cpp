@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <string>
 
-long double f(long double x) {return std::exp(-10*x);};
+long double f(long double x) {return 100.0L * std::expl(-10L*x);};
 
 void solve(int N) {
 	long double a = -1.0f;
@@ -24,7 +24,7 @@ void solve(int N) {
 	std::vector<long double> u(n);
 
 	for (int i = 0; i < n; i++) {
-		u[i] = 100.0*h*h*f(x[i]);
+		u[i] = h*h*f(x[i]);
 	};
 
 	for (int i = 1; i<n; i++) {
