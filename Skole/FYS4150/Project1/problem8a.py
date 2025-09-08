@@ -20,7 +20,7 @@ def read_and_analyze(filename):
         err.append(error)
     plt.plot(x[1:],err,label=f"Error when N={len(x)}")
 
-read_and_analyze("problem710.txt")
+#read_and_analyze("problem710.txt")
 read_and_analyze("problem7100.txt")
 read_and_analyze("problem71000.txt")
 read_and_analyze("problem710000.txt")
