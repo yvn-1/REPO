@@ -27,15 +27,20 @@ int main() {
 	};
 
 	for (int i = 1; i<n; i++) {
-		m = a/b[i-1];
+		float m = a/b[i-1];
 		b[i] = b[i] - m*c;
-		g[i] = g[i] - m*g[i-1];
+		u[i] = u[i] - m*u[i-1];
 	};
-	v[n]=0;
-	v[n-1] = g[n-1] / b[n-1];
+	v[n-1] = u[n-1] / b[n-1];
 	for (int i = n-2; i >= 0; i--) {
-		v[i] = (g[i]-c*v[i+1])/b[i];
+		v[i] = (u[i]-c*v[i+1])/b[i];
 	};
+	
+	std::ofstream file("problem7.txt");
+	for (int i = 0; i < n; i++) {
+		file << x[i] << "," << v[i] <<std::endl;
+	};
+	file.close();
 
 	return 0;
 }
