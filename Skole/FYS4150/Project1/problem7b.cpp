@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <string>
 
-long double f(long double x) {return -100.0L * std::expl(-10L*x);};
+long double f(long double x) {return 100.0L * std::expl(-10L*x);};
 
 void solve(int N) {
 	long double a = -1.0f;
