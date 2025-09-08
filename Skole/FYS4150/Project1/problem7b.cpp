@@ -17,8 +17,8 @@ void solve(int N) {
 	
 	std::vector<double> x(n);
 	x[0] = 0;
-	for (int i = 1; i<n;i++) {
-		x[i] = i*h;
+	for (int i = 0; i<n;i++) {
+		x[i] = (i+1)*h;
 	};
 
 	std::vector<double> u(n);
@@ -34,7 +34,7 @@ void solve(int N) {
 	};
 	v[0] = 0;
 	v[n-1] = u[n-1] / b[n-1];
-	for (int i = n-2; i > 0; i--) {
+	for (int i = n-2; i >= 0; i--) {
 		v[i] = (u[i]-c*v[i+1])/b[i];
 	};
 	std::string filename = "problem7"+std::to_string(N)+".txt";
