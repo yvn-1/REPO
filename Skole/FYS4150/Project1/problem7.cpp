@@ -3,7 +3,7 @@
 #include <vector>
 #include <iomanip>
 
-float f(float x) {return std::expf(-10*x);};
+float f(float x) {return 100 * std::expf(-10*x);};
 
 int main() {
 	float a = -1.0f;
