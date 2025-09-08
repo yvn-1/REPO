@@ -14,8 +14,12 @@ sizes = [10,100,1000,10000,100000]
 
 for s in sizes:
     xv = handle_file(s)
-    plt.plot(xv[0],xv[1])
+    plt.plot(xv[0],xv[1],label=f"N={s}")
 
+plt.xlabel('x')
+plt.ylabel('v_i')
+plt.grid(True)
+plt.legend()
 plt.savefig("problem7b.pdf")
 
     
