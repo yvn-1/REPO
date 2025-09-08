@@ -32,6 +32,7 @@ int main() {
 		b[i] = b[i] - m*c;
 		u[i] = u[i] - m*u[i-1];
 	};
+	v[0] = 0;
 	v[n-1] = u[n-1] / b[n-1];
 	for (int i = n-2; i >= 0; i--) {
 		v[i] = (u[i]-c*v[i+1])/b[i];
