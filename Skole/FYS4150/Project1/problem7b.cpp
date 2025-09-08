@@ -4,31 +4,31 @@
 #include <iomanip>
 #include <string>
 
-double f(double x) {return std::exp(-10*x);};
+long double f(long double x) {return std::exp(-10*x);};
 
 void solve(int N) {
-	double a = -1.0f;
-	double c = -1.0f;
+	long double a = -1.0f;
+	long double c = -1.0f;
 	int n = N-1;
-	std::vector<double> b(n, 2.0f);
-	std::vector<double> v(n);
+	std::vector<long double> b(n, 2.0f);
+	std::vector<long double> v(n);
 
-	double h = 1.0f/N;
+	long double h = 1.0f/N;
 	
-	std::vector<double> x(n);
+	std::vector<long double> x(n);
 	x[0] = 0;
 	for (int i = 0; i<n;i++) {
 		x[i] = (i+1)*h;
 	};
 
-	std::vector<double> u(n);
+	std::vector<long double> u(n);
 
 	for (int i = 0; i < n; i++) {
 		u[i] = 100.0*h*h*f(x[i]);
 	};
 
 	for (int i = 1; i<n; i++) {
-		double m = a/b[i-1];
+		long double m = a/b[i-1];
 		b[i] = b[i] - m*c;
 		u[i] = u[i] - m*u[i-1];
 	};
