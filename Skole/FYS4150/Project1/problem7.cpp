@@ -14,9 +14,10 @@ int main() {
 	std::vector<float> v(n);
 
 	float h = 1.0f/N;
-
+	
 	std::vector<float> x(n);
-	for (int i = 0; i<n;i++) {
+	x[0] = 0;
+	for (int i = 1; i<n;i++) {
 		x[i] = (i+1)*h;
 	};
 
