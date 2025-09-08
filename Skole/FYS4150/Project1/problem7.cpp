@@ -8,7 +8,7 @@ float f(float x) {return std::expf(-10*x);};
 int main() {
 	float a = -1.0f;
 	float c = -1.0f;
-	int N = 100;
+	int N = 1000;
 	int n = N-1;
 	std::vector<float> b(n, 2.0f);
 	std::vector<float> v(n);
