@@ -22,7 +22,7 @@ int main() {
 	};
 
 	std::vector<float> u(n);
-
+	//Initiate g values/u values
 	for (int i = 0; i < n; i++) {
 		u[i] = 100.0*h*h*f(x[i]);
 	};
@@ -32,6 +32,7 @@ int main() {
 		b[i] = b[i] - m*c;
 		u[i] = u[i] - m*u[i-1];
 	};
+	//Calculate solutions
 	v[0] = 0;
 	v[n-1] = u[n-1] / b[n-1];
 	for (int i = n-2; i > 0; i--) {
