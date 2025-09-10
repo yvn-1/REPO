@@ -4,21 +4,20 @@
 #include <iomanip>
 #include <string>
 
-long double f(long double x) {return 100.0L * std::expl(-10L*x);};
+long double f(long double x) {return 100.0L * std::expl(-10.0L*x);};
 
 void solve(int N) {
-	long double a = -1.0f;
-	long double c = -1.0f;
+	long double a = -1.0L;
+	long double c = -1.0L;
 	int n = N-1;
-	std::vector<long double> b(n, 2.0f);
+	std::vector<long double> b(n, 2.0L);
 	std::vector<long double> v(n);
 
-	long double h = 1.0f/N;
+	long double h = 1.0L/N;
 	
 	std::vector<long double> x(n);
-	x[0] = 0;
 	for (int i = 0; i<n;i++) {
-		x[i] = (i+1)*h;
+		x[i] = i*h;
 	};
 
 	std::vector<long double> u(n);
@@ -26,7 +25,7 @@ void solve(int N) {
 	for (int i = 0; i < n; i++) {
 		u[i] = h*h*f(x[i]);
 	};
-
+	
 	for (int i = 1; i<n; i++) {
 		long double m = a/b[i-1];
 		b[i] = b[i] - m*c;
@@ -34,13 +33,12 @@ void solve(int N) {
 	};
 	v[0] = 0;
 	v[n-1] = u[n-1] / b[n-1];
-	for (int i = n-2; i >= 0; i--) {
+	for (int i = n-2; i > 0; i--) {
 		v[i] = (u[i]-c*v[i+1])/b[i];
 	};
 	std::string filename = "problem7"+std::to_string(N)+".txt";
 	std::ofstream file(filename);
-	file << std::scientific << std::setprecision(9);
-	int step = std::max(1, n/5000);
+	file << std::scientific << std::setprecision(32);
 	for (int i = 0; i < n; i++) {
 		file << x[i] << "," << v[i] <<std::endl;
 	};
