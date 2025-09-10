@@ -24,9 +24,10 @@ for N in [10,100,1000,10000,100000,1000000]:
 
     general_avg_N.append((N,avg_general))
     improved_avg_N.append((N,avg_improved))
-
-plt.plot(general_avg_N,label="General")
-plt.plot(improved_avg_N,label="Improved")
+x,y = zip(*general_avg_N)
+plt.plot(x,y,label="General")
+w, z = zip(*improved_avg_N)
+plt.plot(w,z,label="Improved")
 plt.grid(True)
 plt.xlabel("Number of steps N")
 plt.ylabel("Average timing [s]")
