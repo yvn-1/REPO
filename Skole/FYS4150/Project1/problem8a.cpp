@@ -59,7 +59,7 @@ void solve(int N) {
 	else {
 		int step = std::floor(size(v)/5000);
 		for (int j = 0; j<n; j = j + step) {
-			file << x[j] << "," << v[j] << std::endl;
+			file << x[j] << "," << error[j] << std::endl;
 		};
 	};
 	file.close();
