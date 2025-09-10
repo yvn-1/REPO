@@ -24,6 +24,7 @@ void solve(int N) {
 	for (int i = 0; i < n; i++) {
 		u[i] = h*h*f(x[i]);
 	};
+	//Swapping out a and c with the numbers, shaves off 2N flops
 	u[0]=0;
 	for (int i = 1; i<n; i++) {
 		long double m = -1/b[i-1];
@@ -34,6 +35,7 @@ void solve(int N) {
 	for (int i = n-2; i >= 0; i--) {
 		v[i] = (u[i]+v[i+1])/b[i];
 	};
+	
 
 	std::string filename = "problem9c"+std::to_string(N)+".txt";
 	std::ofstream file(filename);

@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+#Reads all files and makes plot of them together
 def read_and_analyze(filename,N):
     fil = open(filename)
     x = []

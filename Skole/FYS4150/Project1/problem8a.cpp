@@ -15,6 +15,7 @@ void solve(int N) {
 
 	long double h = 1.0f/N;
 	
+	//Populate x values for the step given by N
 	std::vector<long double> x(n);
 	x[0] = 0;
 	for (int i = 0; i<n;i++) {
@@ -36,18 +37,21 @@ void solve(int N) {
 	for (int i = n-2; i >= 0; i--) {
 		v[i] = (u[i]-c*v[i+1])/b[i];
 	};
+
+	//Calculating the analytical solution for comparison
 	std::vector<long double> exact;
 	for (auto e: x) {
 		double long val = 1-(1-std::expl(-10.0L))*e-std::expl(-10*e);
 		exact.push_back(val);
 	};
+	//Calculating the log of the absolute error
 	std::vector<double long> error;
 	for (int i =0; i< size(exact);i++) {
 		double long err = std::log10l(std::abs(exact[i]-v[i]));
 		error.push_back(err);
 	};
 	
-
+	//Had to reduce the number of lines I output because I havent looked at more efficient filetypes yet (saving large numbers as strings is very expensive)
 	std::string filename = "problem8a"+std::to_string(N)+".txt";
 	std::ofstream file(filename);
 	file << std::scientific << std::setprecision(32);

@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 general_avg_N = []
 improved_avg_N = []
 
+
+#Reads in all files produced for timings, takes averages, and plots linear and logarithmic
 for N in [10,100,1000,10000,100000,1000000]:
     improved = open(f"problem10improved{N}.txt")
     general = open(f"problem10general{N}.txt")

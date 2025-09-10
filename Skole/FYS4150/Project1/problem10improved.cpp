@@ -25,7 +25,8 @@ void solve(int N) {
 	for (int i = 0; i < n; i++) {
 		u[i] = h*h*f(x[i]);
 	};
-
+	
+	//This is the same as from problem 9, just with timing as given in the problem text added
 	auto t1 = std::chrono::high_resolution_clock::now();
 	u[0]=0;
 	for (int i = 1; i<n; i++) {

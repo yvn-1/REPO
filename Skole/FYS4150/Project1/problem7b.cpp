@@ -21,11 +21,14 @@ void solve(int N) {
 	};
 
 	std::vector<long double> u(n);
-
+	
+	//Fill g values
 	for (int i = 0; i < n; i++) {
 		u[i] = h*h*f(x[i]);
 	};
 	
+
+	//Implements the algorithm as stated in the answer sheet
 	for (int i = 1; i<n; i++) {
 		long double m = a/b[i-1];
 		b[i] = b[i] - m*c;
@@ -36,6 +39,8 @@ void solve(int N) {
 	for (int i = n-2; i > 0; i--) {
 		v[i] = (u[i]-c*v[i+1])/b[i];
 	};
+
+	//Writes to txt to be read in python
 	std::string filename = "problem7"+std::to_string(N)+".txt";
 	std::ofstream file(filename);
 	file << std::scientific << std::setprecision(32);
