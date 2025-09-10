@@ -28,6 +28,7 @@ void solve(int N) {
 		u[i] = h*h*f(x[i]);
 	};
 
+	//Timing for the general algorithm, as given in the problem text
 	auto t1 = std::chrono::high_resolution_clock::now();
 	u[0]=0;
 	for (int i = 1; i<n; i++) {
@@ -50,6 +51,7 @@ void solve(int N) {
 	file.close();
 };
 
+//Repeats 10 times for each number of steps
 int main() {
 
 	for (int i = 0; i<10; i++) {
