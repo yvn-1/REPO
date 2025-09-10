@@ -42,7 +42,7 @@ void solve(int N) {
 		exact.push_back(val);
 	};
 	std::vector<double long> error;
-	long double max_error = 0;
+	long double max_error = -100;
 	for (int i =0; i< size(exact);i++) {
 		double long err = std::log10l(std::abs((exact[i]-v[i])/exact[i]));
 		if (err>max_error) {
