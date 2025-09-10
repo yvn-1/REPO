@@ -50,7 +50,7 @@ void solve(int N) {
 
 	std::string filename = "problem8a"+std::to_string(N)+".txt";
 	std::ofstream file(filename);
-	file << std::scientific << std::setprecision(20);
+	file << std::scientific << std::setprecision(32);
 	if (size(error)<5000){
 		for (int i = 0; i < n; i++) {
 			file << x[i] << "," << error[i] <<std::endl;
