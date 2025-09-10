@@ -26,13 +26,12 @@ void solve(int N) {
 	for (int i = 0; i < n; i++) {
 		u[i] = h*h*f(x[i]);
 	};
-
+	u[0]=0;
 	for (int i = 1; i<n; i++) {
 		long double m = a/b[i-1];
 		b[i] = b[i] - m*c;
 		u[i] = u[i] - m*u[i-1];
 	};
-	v[0] = 0;
 	v[n-1] = u[n-1] / b[n-1];
 	for (int i = n-2; i >= 0; i--) {
 		v[i] = (u[i]-c*v[i+1])/b[i];
