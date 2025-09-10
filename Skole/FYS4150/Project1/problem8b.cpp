@@ -36,6 +36,8 @@ void solve(int N) {
 	for (int i = n-2; i >= 0; i--) {
 		v[i] = (u[i]-c*v[i+1])/b[i];
 	};
+
+	//Calculate the log of the relative error against the exact solution
 	std::vector<long double> exact;
 	for (auto e: x) {
 		double long val = 1-(1-std::expl(-10.0L))*e-std::expl(-10*e);
