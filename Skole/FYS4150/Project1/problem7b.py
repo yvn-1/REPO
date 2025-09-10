@@ -12,6 +12,7 @@ def handle_file(f):
 
 sizes = [10,100,1000,10000,100000]
 
+#Plots the different solutions for different number of steps
 for s in sizes:
     xv = handle_file(s)
     plt.plot(xv[0],xv[1],label=f"N={s}")
