@@ -41,14 +41,13 @@ void solve(int N) {
 		double long val = 1-(1-std::expl(-10.0L))*e-std::expl(-10*e);
 		exact.push_back(val);
 	};
-	std::vector<double long> error;
-	long double max_error = -100;
+
+	long double max_error = 0;
 	for (int i =0; i< size(exact);i++) {
-		double long err = std::log10l(std::abs((exact[i]-v[i])/exact[i]));
-		if (err>max_error) {
-			max_error = err;
+		double long rel_error = std::abs((exact[i]-v[i])/exact[i]);
+		if (rel_error>max_error) {
+			max_error = rel_error;
 		};
-		error.push_back(err);
 	};
 	
 
