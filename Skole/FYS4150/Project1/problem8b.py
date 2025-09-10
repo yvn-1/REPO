@@ -24,6 +24,8 @@ read_and_analyze("problem7100.txt")
 read_and_analyze("problem71000.txt")
 read_and_analyze("problem710000.txt")
 read_and_analyze("problem7100000.txt")
+read_and_analyze("problem71000000.txt")
+read_and_analyze("problem710000000.txt")
 
 plt.grid(True)
 plt.xlabel('x')
