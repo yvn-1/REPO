@@ -22,7 +22,7 @@ read_and_analyze("problem8a10000000.txt",10000000)
 
 plt.grid(True)
 plt.xlabel('x')
-plt.ylabel('y')
+plt.ylabel('log(abs(u-v))')
 plt.legend()
 plt.savefig("problem8a.pdf")
 
