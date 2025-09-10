@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def read_and_analyze(filename):
+def read_and_analyze(filename,N):
     fil = open(filename)
     x = []
     v = []
@@ -17,15 +17,15 @@ def read_and_analyze(filename):
     for i in range(1,len(x)):
         diff = abs(u[i]-v[i])
         err.append(np.log10(diff))
-    plt.plot(x[1:],err,label=f"Error when N={len(x)+1}")
+    plt.plot(x[1:],err,label=f"Error when N={N}")
 
-read_and_analyze("problem710.txt")
-read_and_analyze("problem7100.txt")
-read_and_analyze("problem71000.txt")
-read_and_analyze("problem710000.txt")
-read_and_analyze("problem7100000.txt")
-read_and_analyze("problem71000000.txt")
-read_and_analyze("problem710000000.txt")
+read_and_analyze("problem710.txt",10)
+read_and_analyze("problem7100.txt",100)
+read_and_analyze("problem71000.txt",1000)
+read_and_analyze("problem710000.txt",10000)
+read_and_analyze("problem7100000.txt",100000)
+read_and_analyze("problem71000000.txt",1000000)
+read_and_analyze("problem710000000.txt",10000000)
 
 plt.grid(True)
 plt.xlabel('x')
