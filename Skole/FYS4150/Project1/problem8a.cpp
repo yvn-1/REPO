@@ -62,5 +62,7 @@ int main() {
 	solve(1000);
 	solve(10000);
 	solve(100000);
+	solve(1000000);
+	solve(10000000);
 }
 
