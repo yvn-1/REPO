@@ -41,7 +41,7 @@ void solve(int N) {
 		double long val = 1-(1-std::expl(-10.0L))*e-std::expl(-10*e);
 		exact.push_back(val);
 	};
-
+	//Stores the highest error encountered and prints to a file
 	long double max_error = 0;
 	for (int i =0; i< size(exact);i++) {
 		double long rel_error = std::abs((exact[i]-v[i])/exact[i]);
